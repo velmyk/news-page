@@ -1,0 +1,23 @@
+@mixin inline() {
+	display: inline-block;
+
+	vertical-align: middle;
+}
+
+@mixin tablet {
+	@media (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin clearfix {
+	&::before,
+	&::after {
+		display: table;
+
+		content: '';
+	}
+	&::after {
+		clear: both;
+	}
+}

@@ -1,0 +1,44 @@
+i {
+	&.icon {
+		&-arrow_red_small_left {
+			@include sprite($icon-arrow_red_small_left);
+			@include inline();
+		}
+		&-arrow_red_small_right {
+			@include sprite($icon-arrow_red_small_right);
+			@include inline();
+		}
+		&-arrow_red_big_left {
+			@include sprite($icon-arrow_red_big_left);
+			@include inline();
+		}
+		&-arrow_red_big_right {
+			@include sprite($icon-arrow_red_big_right);
+			@include inline();
+		}
+		&-diagram_black_small {
+			@include sprite($icon-diagram_black_small);
+			@include inline();
+		}
+		&-callback {
+			@include sprite($icon-callback);
+			@include inline();
+		}
+		&-photo_black_small {
+			@include sprite($icon-photo_black_small);
+			@include inline();
+		}
+		&-photo_red_small {
+			@include sprite($icon-photo_red_small);
+			@include inline();
+		}
+		&-video_black_small {
+			@include sprite($icon-video_black_small);
+			@include inline();
+		}
+		&-video_purple_small {
+			@include sprite($icon-video_purple_small);
+			@include inline();
+		}
+	}
+}

@@ -1,0 +1,76 @@
+.interesting-articles {
+	margin-top: 43px;
+
+	@include tablet {
+		width: 100%;
+	};
+	&-title {
+		&__text {
+			display: inline-block;
+
+			width: 300px;
+
+			color: $brand-black;
+			border-bottom: 2px solid $brand-black;
+
+			font-size: 24px;
+			line-height: 26px;
+
+			@include tablet {
+				width: 100%;
+			};
+		}
+	}
+	&-list {
+		margin-top: 10px;
+
+		@include tablet {
+			@include clearfix;
+		}
+		&__underline {
+			display: inline-block;
+
+			width: 301px;
+			margin-bottom: 10px;
+
+			border-bottom: 5px solid $brand-black;
+
+			@include tablet {
+				display: none;
+			};
+		}
+	}
+	&-item {
+		display: block;
+
+		margin-bottom: 17px;
+
+		@include tablet {
+			float: left;
+		};
+		&__image {
+			position: relative;
+
+			display: block;
+			float: left;
+			.icon {
+				position: absolute;
+				bottom: 1px;
+				left: 0;
+			}
+		}
+		&__text {
+			display: block;
+			float: left;
+
+			width: 188px;
+			padding: 0 0 0 8px;
+
+			color: $brand-black;
+
+			font-size: 18px;
+			font-weight: light;
+			line-height: 19px;
+		}
+	}
+}

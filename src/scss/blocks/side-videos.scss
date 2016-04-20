@@ -1,0 +1,88 @@
+.side-videos {
+	margin-top: 6px;
+
+	@include tablet {
+		width: 100%;
+	};
+	&-title {
+		&__text {
+			display: inline-block;
+
+			color: $brand-purple;
+
+			font-size: 18px;
+			font-weight: bold;
+		}
+		&__line {
+			display: inline-block;
+
+			width: 117px;
+			margin-bottom: 5px;
+
+			border-bottom: 2px solid $brand-black;
+
+			@include tablet {
+				width: 276px;
+			};
+		}
+	}
+	&-list {
+		margin-top: 10px;
+
+		@include tablet {
+			@include clearfix;
+		}
+		&__more {
+			margin-top: 22px;
+
+			color: #3d76cc;
+
+			font-size: 18px;
+		}
+		&__underline {
+			display: inline-block;
+
+			width: 301px;
+			margin-bottom: 3px;
+
+			border-bottom: 5px solid $brand-black;
+
+			@include tablet {
+				display: none;
+			};
+		}
+	}
+	&-item {
+		display: block;
+
+		margin-bottom: 7px;
+
+		@include tablet {
+			float: left;
+		};
+		&__image {
+			position: relative;
+
+			display: block;
+			float: left;
+			.icon {
+				position: absolute;
+				bottom: 1px;
+				left: 0;
+			}
+		}
+		&__text {
+			display: block;
+			float: left;
+
+			width: 147px;
+			padding: 0 0 0 13px;
+
+			color: #000000;
+
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 18px;
+		}
+	}
+}

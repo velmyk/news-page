@@ -1,0 +1,45 @@
+{
+  "name": "bem",
+  "version": "1.0.0",
+  "description": "Practice in bem methodology",
+  "repository": "",
+  "main": "",
+  "scripts": {
+    "clean": "rimraf target",
+    "folders": "mkdir ./target ./target/img",
+    "static:html": "cp ./src/index.html ./target/index.html",
+    "static:img": "cp ./src/images/content/*.jpg ./target/img/",
+    "autoprefixer": "postcss -u autoprefixer -r target/*.css",
+    "build:css": "node-sass --output-style compressed ./src/scss/core.scss ./target/app.css",
+    "watch:css": "onchange 'src/**/*.scss' -- npm-run-all build:css autoprefixer",
+    "watch:html": "onchange 'src/index.html' -- npm run static:html",
+    "sprites": "sprity create ./target src/images/icons/*.png -c ./ -s ../src/scss/sprite.scss -p sass --style-type scss",
+    "browser-sync": "browser-sync start --server --files 'src/**/*.*'",
+    "start": "npm run build && npm-run-all --parallel watch:css watch:html browser-sync",
+    "build": "npm-run-all clean folders static:html static:img sprites build:css autoprefixer"
+  },
+  "keywords": [
+    "HTML",
+    "BEM",
+    "SASS"
+  ],
+  "author": "velmyk",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.12.1",
+    "sprity": "1.0.8",
+    "sprity-cli": "1.0.1"
+  },
+  "dependencies": {
+    "autoprefixer": "6.3.4",
+    "node-sass": "3.4.2",
+    "npm-run-all": "1.5.1",
+    "onchange": "2.2.0",
+    "postcss-cli": "2.5.1",
+    "rimraf": "2.5.2",
+    "sprity-sass": "1.0.4"
+  },
+  "engines": {
+    "node": "4.3.1"
+  }
+}

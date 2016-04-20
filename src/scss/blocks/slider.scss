@@ -1,0 +1,35 @@
+.slider {
+	border-bottom: solid 5px $brand-red;
+	background-color: $brand-gray-light;
+	&__image {
+		float: left;
+
+		width: 377px;
+		padding-bottom: -3px;
+	}
+	&-text {
+		float: left;
+
+		width: 220px;
+		margin: 7px 0 0 23px;
+		&__title {
+			color: $brand-red;
+
+			font-family: 'PT Serif', sans-serif;
+			font-size: 30px;
+			font-weight: regular;
+			line-height: 35px;
+		}
+		&__body {
+			padding: 14px 5px 0 0;
+
+			color: $brand-black;
+
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+	&__indicator {
+		margin: 34px 0 0 96px;
+	}
+}

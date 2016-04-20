@@ -1,0 +1,25 @@
+.hot-themes {
+	margin-bottom: 20px;
+
+	font-size: 18px;
+	line-height: 17px;
+	&__header {
+		float: left;
+
+		padding: 7px 15px;
+
+		color: $brand-white;
+		background-color: $brand-gray-dark;
+	}
+	&-list {
+		background-color: $brand-gray;
+		&-item {
+			display: inline-block;
+
+			padding: 7px 11px;
+			&__link {
+				color: $brand-gray-dark;
+			}
+		}
+	}
+}
